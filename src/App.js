@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import "./styles.css";
+import { Form } from "./form/form.js";
+import { DisplayTask } from "./display/displayTasks.js";
+import QuoteMaker from "./components/quoteMaker.js";
+import Footer from "./components/footer.js";
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main-container">
+      <QuoteMaker />
+      <Form />
+      <DisplayTask />
+      <Footer />
     </div>
   );
 }
-
-export default App;

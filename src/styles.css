@@ -1,0 +1,52 @@
+:root {
+  --yellow: rgba(250, 216, 89, 1);
+  --green: lightseagreen;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.main-container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: auto 1fr auto;
+  background-image: linear-gradient(to top left, rgb(89, 201, 195), white);
+}
+.header {
+  grid-column: 1/ 9;
+  grid-row: 1 / span 1;
+  background-color: var(--yellow);
+  font-size: 1.2em;
+  text-align: center;
+  font-family: "Red Hat Mono", monospace;
+  font-style: italic;
+}
+@media screen and (max-width: 600px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+  }
+
+  .form-div {
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 1;
+  }
+  .to-do-div {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+    grid-template: 1fr / 1fr;
+  }
+}
+.footer {
+  grid-row: 4/5;
+  grid-column: 1/9;
+  text-align: center;
+  width: 100%;
+  font-family: "Red Hat Mono", monospace;
+  background-color: var(--yellow);
+  font-size: 1em;
+  font-weight: lighter;
+}

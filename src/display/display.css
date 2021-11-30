@@ -1,0 +1,53 @@
+.to-do-div {
+  margin: 2rem;
+  display: grid;
+  grid-template: repeat(5, 1fr) / repeat(6, 1fr);
+  grid-row: 2 / span 1;
+  grid-column: 2/10;
+  font-family: "Quantico", sans-serif;
+  gap: 2px;
+}
+.to-do-item {
+  grid-column: 1 / span 6;
+  display: flex;
+  flex-direction: column;
+  padding: 0.2rem;
+  gap: 0px;
+  margin: 0.2rem;
+}
+
+.each-todo-div {
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--yellow);
+  margin: 0.1rem;
+}
+.to-do-item-each-p {
+  margin: 2rem auto;
+}
+.to-do-item-each-p-active {
+  margin: 2rem auto;
+  text-decoration: line-through;
+}
+.button-div {
+  display: flex;
+  flex-direction: column;
+  padding: 0.4rem;
+  justify-content: center;
+}
+.button-div button {
+  width: 15px;
+  height: 40%;
+  cursor: pointer;
+  margin-top: 0.2rem;
+  border: 2px solid;
+}
+@media screen and (max-width: 600px) {
+  .to-do-div {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+    grid-template: 1fr / 1fr;
+  }
+}
