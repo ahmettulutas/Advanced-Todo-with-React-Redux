@@ -1,20 +1,20 @@
 .form-div {
   grid-row: 2 / span 1;
-  grid-column: 1 / span 1;
+  grid-column: 1 / span 3;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
-  margin: 1.5rem;
+  padding: 3rem;
+  margin: 0.2rem;
 }
 
 .form-component-div {
   background-color: var(--yellow);
-  min-height: 180px;
+  min-height: 160px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   border: 2px solid black;
-  padding: 0.5rem;
+  padding: 0.5rem;  
 }
 
 .form-button-div Button {
@@ -24,8 +24,11 @@
   width: 100%;
   cursor: pointer;
 }
-.form-button-div Button:active {
+.form-button-div Button:focus {
   background-color: var(--green);
+}
+.textfield {
+  padding:2rem;
 }
 @media screen and (max-width: 600px) {
   .form-div {

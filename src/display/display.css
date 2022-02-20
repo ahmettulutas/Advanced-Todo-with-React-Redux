@@ -1,9 +1,9 @@
-.to-do-div {
+/* .to-do-div {
   margin: 2rem;
   display: grid;
   grid-template: repeat(5, 1fr) / repeat(6, 1fr);
   grid-row: 2 / span 1;
-  grid-column: 2/10;
+  grid-column: 4 /10;
   font-family: "Quantico", sans-serif;
   gap: 2px;
 }
@@ -14,9 +14,29 @@
   padding: 0.2rem;
   gap: 0px;
   margin: 0.2rem;
+  border-radius: 10px 0px 10px 0;
+} */
+
+.to-do-div {
+  grid-row: 2 / span 1;
+  grid-column: 4 /10;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  font-family: "Quantico", sans-serif;
+  gap: 2px;
+}
+.to-do-item {
+  display: flex;
+  flex-direction: column;
+  padding: 0.2rem;
+  gap: 0px;
+  margin: 0.1rem;
+  border-radius: 10px 0px 10px 0;
 }
 
 .each-todo-div {
+  border-radius:10px 10px 10px 10px;
   border: 1px solid black;
   display: flex;
   align-items: center;

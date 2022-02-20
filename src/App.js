@@ -1,5 +1,5 @@
 import "./styles.css";
-import { Form } from "./form/form.js";
+import { Form } from "./form/form";
 import { DisplayTask } from "./display/displayTasks.js";
 import QuoteMaker from "./components/quoteMaker.js";
 import Footer from "./components/footer.js";

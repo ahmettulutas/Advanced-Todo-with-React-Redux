@@ -8,7 +8,7 @@ export default function QuoteMaker() {
   }
   useEffect(() => {
     fetchQuotes().then((data) => {
-      setQuote((prev) => data[Math.floor(Math.random() * 1500)].text);
+      setQuote(data[Math.floor(Math.random() * 1500)].text);
     });
   }, []);
 

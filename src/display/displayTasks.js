@@ -1,7 +1,8 @@
 import "./display.css";
+import { useEffect} from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { selectAllTodos } from "./displaySlice.js";
-import { switchTodo, deleteTodo } from "../form/formSlice.js";
+import {selectAllTodos} from "../form/formSlice";
+import { switchTodo, deleteTodo } from "../form/formSlice";
 import Button from "@mui/material/Button";
 import DeleteIcon from "@mui/icons-material/Delete";
 import CheckIcon from "@mui/icons-material/Check";
@@ -9,21 +10,20 @@ import CheckIcon from "@mui/icons-material/Check";
 export const DisplayTask = () => {
   const taskstoDisplay = useSelector(selectAllTodos);
   const dispatch = useDispatch();
+  useEffect(() => {
 
+      window.localStorage.setItem("tasks", JSON.stringify(taskstoDisplay));
+  },[taskstoDisplay]);
   return (
     <main className="to-do-div">
-      {taskstoDisplay.map((item) => (
-        <section className="to-do-item">
+      {taskstoDisplay.map((item, index) => (
+        <section id={index} className={item.style}>
           <div className="each-todo-div">
-            <div
-              className={
+              <p className={
                 item.completed
                   ? "to-do-item-each-p-active"
                   : "to-do-item-each-p"
-              }
-            >
-              <p>{item.todo}</p>
-            </div>
+              }>{item.todo}</p>
             <div className="button-div">
               <Button
                 size="small"
